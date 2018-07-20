@@ -5,13 +5,70 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <h2>Mon application</h2>
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    Road to jamaica
   </p>
   <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
+    Road to jamaica done <code>src/pages/</code> directory to add or change tabs,
     update any existing page or create new pages.
   </p>
+ 
+     <button
+  ion-button
+  item-right
+  color="secondary"
+  text-center
+  block
+  (tap)="showDetail()">Lire etat</button>
+  <button
+  ion-button
+  item-right
+  color="secondary"
+  text-center
+  block
+  (tap)="insert()">insert test</button>
+
+  <ion-list>
+    <ion-item-group>
+       <ion-item-divider color="light">Nom du client*</ion-item-divider>
+       <ion-item>
+          <ion-input
+             type="text"
+             placeholder="saisir le nom..."
+             [(ngModel)]="nom"></ion-input>
+       </ion-item>
+    </ion-item-group>
+
+
+    <ion-item-group>
+       <ion-item-divider color="light"> prenom*</ion-item-divider>
+       <ion-item>
+          <ion-input
+          type="text"
+             placeholder="prenom"
+             rows="6"
+             [(ngModel)]="prenom"></ion-input>
+       </ion-item>
+       <ion-item>
+        <ion-input
+        type="text"
+           placeholder="age"
+           rows="6"
+           [(ngModel)]="age"></ion-input>
+     </ion-item>
+    </ion-item-group>
+
+
+    <ion-item>
+       <button
+          ion-button
+          color="primary"
+          text-center
+          block
+          (tap)="road()"
+         >Enregistrer</button>
+    </ion-item>
+
+ </ion-list>
 </ion-content>
